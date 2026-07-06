@@ -1,0 +1,23 @@
+services:
+  uptime-monitor:
+    build: .
+    container_name: uptime-monitor
+    restart: unless-stopped
+    ports:
+      - "5301:5301"
+    environment:
+      - PORT=5301
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-change-me-now}
+      - STATUS_PAGE_NAME=${STATUS_PAGE_NAME:-Service Status}
+      - ALERT_WEBHOOK_URL=${ALERT_WEBHOOK_URL:-}
+      - SMTP_HOST=${SMTP_HOST:-}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USER=${SMTP_USER:-}
+      - SMTP_PASS=${SMTP_PASS:-}
+      - SMTP_FROM=${SMTP_FROM:-}
+      - ALERT_EMAIL_TO=${ALERT_EMAIL_TO:-}
+    volumes:
+      - uptime-data:/app/data
+
+volumes:
+  uptime-data:
