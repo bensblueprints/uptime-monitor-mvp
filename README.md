@@ -87,7 +87,7 @@ The SQLite database persists in the `uptime-data` volume.
 
 Want the packaged, zero-config version (Windows installer, auto-updates, priority support)? Grab it on Whop:
 
-**→ [https://whop.com/onetime-suite](https://whop.com/onetime-suite)**
+**→ [https://whop.com/benjisaiempire/upwatch](https://whop.com/benjisaiempire/upwatch)**
 
 The source here is MIT and always will be — the paid version is pure convenience.
 
